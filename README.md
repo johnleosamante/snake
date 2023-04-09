@@ -1,2 +1,2 @@
-# snake
+# Snake
 Snake Phaser Clone
