@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Snake</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="style/main.css" />
+	<script src="script/phaser/phaser.min.js"></script>
+	<script src="script/Storage.js"></script>
+	<script src="script/Boot.js"></script>
+	<script src="script/Preloader.js"></script>
+	<script src="script/MainMenu.js"></script>
+	<script src="script/Play.js"></script>
+	<script src="script/GameOver.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		window.onload = function() {
+			var game = new Phaser.Game(800, 600, Phaser.AUTO);
+			
+			game.state.add('Boot', Game.Boot);
+			game.state.add('Preloader', Game.Preloader);
+			game.state.add('MainMenu', Game.MainMenu);
+			game.state.add('Play', Game.Play);
+			game.state.add('GameOver', Game.GameOver);
+			
+			game.state.start('Boot');
+		};
+	</script>
+</body>
+</html>
